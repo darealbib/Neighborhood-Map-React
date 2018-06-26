@@ -9,8 +9,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1> Google Maps API + React </h1> // title
-        // Passing Props to MapContainer
+        <h1> Restaurants in Kathmandu </h1>
         <MapContainer google={this.props.google} />
         </div>
     );
@@ -18,5 +17,5 @@ class App extends Component {
 }
 // Added my Google Map API key
 export default GoogleApiWrapper({
-  apiKey: 'AIzaSyCF3FlZ0BNPcYAL7YFvPjJjfmHc39SA6EM ',
+  apiKey: 'AIzaSyB2QQnmg5PH9Nb3iq-vZ7AQDLPnI-nUL8k',
 })(App)
