@@ -96,11 +96,12 @@ export default class MapContainer extends Component {
       // InfoWindow created for each Marker
       var infowindow = new google.maps.InfoWindow({ maxWidth: 250 });
       this.setState({ infowindow:infowindow })
-    }
+     }
   }
 
+
   openInfoWindow = (marker) => {
-    console.log(this.state.previousMarker);
+  //  console.log(this.state.previousMarker);
     // Animation start and close for each Marker
     if (this.state.previousMarker) { this.state.previousMarker.setAnimation(null); }
         this.setState({  'previousMarker': ''});
@@ -225,7 +226,7 @@ export default class MapContainer extends Component {
       </div>
       </div>
       <div id = "map-container" >
-      <div ref="map" id="map" style={style}>
+      <div ref="map" id="map"  className="map-container" style={style}>
         Loading Map...
       </div>
       </div>
