@@ -25,7 +25,7 @@ export default class MapContainer extends Component {
   componentDidMount() {
     this.loadMap();
   }
-
+ // Sidebar is Toggled
   toggleSidebar = () => {
     document.getElementById('sidebar').classList.toggle('close')
     if (document.getElementById('sidebar').className === 'close') {
@@ -132,7 +132,7 @@ export default class MapContainer extends Component {
                      if (finalResponse.status != 200) {
                          this.state.infowindow.setContent("");
                          var restaurant_details = resp_data;
-                         console.log(restaurant_details);
+                         console.log(restaurant_details); // Response if Premium Calls exceeded
                          var name = '<b> Name of Restuarant : </b>' + restaurant_details.name + '<br>';
                          var category = '<b> Restuarant Category : </b>' + restaurant_details.categories[0].name + '<br>';
                          var address = '<b> Address of Restuarant : </b>' + restaurant_details.location.address + '<br>';
@@ -143,7 +143,7 @@ export default class MapContainer extends Component {
                         }
                         finalResponse.json().then(data=>{
                               var restaurant_details = data.response.venue;
-                              console.log(restaurant_details);
+                              console.log(restaurant_details); // Response if Premium Call allowed
                               var name = '<b> Name of Restuarant : </b>' + restaurant_details.name + '<br>';
                               var rating = '<b> Rating of Restuarant : </b>' + restaurant_details.rating + '<br>';
                               var category = '<b> Restuarant Category : </b>' + restaurant_details.categories[0].name + '<br>';
@@ -226,7 +226,7 @@ export default class MapContainer extends Component {
       </div>
       <div id = "map-container" >
       <div ref="map" id="map" style={style}>
-        loading map...
+        Loading Map...
       </div>
       </div>
       </div>

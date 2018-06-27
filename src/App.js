@@ -10,7 +10,7 @@ class App extends Component {
     return (
 
 
-      <MapContainer google={this.props.google} tabIndex = "-1" />
+      <MapContainer google={this.props.google} />
 
     );
   }
